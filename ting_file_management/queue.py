@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Queue:
     def __init__(self):
         self.data = deque()
@@ -14,8 +15,7 @@ class Queue:
         return self.data.popleft()
 
     def search(self, index):
-        if (0 <= index < len(self)):
+        if 0 <= index < len(self):
             return self.data[index]
 
         raise IndexError
-

@@ -23,12 +23,12 @@ def remove(instance):
         if len(instance) >= 0:
             path_file = instance.dequeue()["nome_do_arquivo"]
             print(f"Arquivo {path_file} removido com sucesso")
-    except:
+    except Exception as e:
         print("Não há elementos", file=sys.stdout)
 
 
 def file_metadata(instance, position):
     try:
         return print(instance.search(position), file=sys.stdout)
-    except:
+    except Exception as e:
         return print("Posição inválida", file=sys.stderr)
